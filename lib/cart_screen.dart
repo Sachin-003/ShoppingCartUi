@@ -41,12 +41,20 @@ class CartScreen extends ConsumerWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ClipRRect(
-                            child: Image.network(
-                              product.thumbnail,
-                              width: MediaQuery.of(context).size.width/3,
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  width: 1,
+                                )
+                            ),
+                            child: ClipRRect(
+                              child: Image.network(
+                                product.thumbnail,
+                                width: MediaQuery.of(context).size.width/3,
 
-                              fit: BoxFit.cover,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           SizedBox(width: 10),
